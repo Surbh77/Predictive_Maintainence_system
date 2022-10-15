@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Predictive Maintenance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <!-- <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Machine Failure Prediction</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link disabled">Disabled</a>
+            </div>
+          </div>
+        </div>
+      </nav> -->
+    <header>
+        <div>Predict the type of failure in machine</div>
+        <p>The scope of the project was to predict machine failures using sensor data and an optimized corrective maintenance schedule which can identify the indicators of potential shortcomings in the production line and can help to prevent some production stops from happening.
+        </p>
+    </header>
+    <form action="" class="container" method="POST">
+        <label for="">Air Temperature [K]<input type="number" name="airtemp"></label>
+        <label for="">process Temperature [K]<input type="number" name="prostemp"></label>
+        <label for="">Rotational Speed [rpm]<input type="number" name="rotatespeed"></label>
+        <label for="">Torque [Nm]<input type="number" name="torque"></label>
+        <label for="">Tool Wear [min]<input type="number" name="toolwear"></label>
+        <label for=""> Type
+            <select name="type" id="lang">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+        </label>
+        <button action="" id="predict-btn">Predict</button>
+    </form>
+    <div id="prediction">{{prediction}}</div>    
+
+    <footer>
+        <nav>
+          <a href="https://github.com/Surbh77">GitHub</a>
+          <a href="https://saurabhshindeportfolio.netlify.app">Portfolio</a>
+        </nav>
+    </footer>
+</body>
+</html>
