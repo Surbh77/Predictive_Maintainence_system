@@ -46,7 +46,11 @@ header div{
     margin: auto;
     margin-top: 10px;
 }
-
+#lang{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
 #prediction{
     text-align: center;
     margin: auto;
